@@ -11,7 +11,7 @@ from robustness import truth_variants
 from simulate import simulate
 
 ROOT = Path(__file__).resolve().parents[1]
-KEYS = ["chalk", "ev_credible", "recommended", "aggressive"]
+KEYS = ["chalk", "ev_credible", "recommended", "aggressive", "dem_wave"]
 
 
 def main():

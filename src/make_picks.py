@@ -5,6 +5,9 @@
   aggressive   the same optimizer with no floor (highest simulated P(win),
                but the picks look like "always pick the Republican")
   ev_credible  maximize expected points; only candidates our model gives >= 5%
+  dem_wave     the mirror bet: back the Democrat (or D-aligned independent) in
+               every R-favored race where they have >= 3%, optimized in a world
+               where Democrats beat their polls by 2 points
   chalk        pick our model's favorite everywhere
 
 Writes output/picks_<name>.csv (template format) and output/detail_<name>.csv.
@@ -64,10 +67,17 @@ def build_all():
     ev = st.ev_max(q, Ll, Lr)
     ev3, ev5 = ev.copy(), ev.copy()
     ev3[lock3], ev5[lock5] = fav[lock3], fav[lock5]
+    # Mirror bet: the only allowed move is a left-side underdog in an R-favored race.
+    lock_d = lock3 | (q > 0.5)
+    dw = fav.copy()
+    dw[~lock_d] = 1
+    W_d, _ = simulate(races, N, seed=0, national_shift=2.0)
+    fmax_d = st.field_max(st.scores(W_d, pool, Ll, Lr), J, seed=3)
     picks = {
         "recommended": st.optimize(ev3, W, Ll, Lr, fmax, locked=lock3),
         "aggressive": st.optimize(ev, W, Ll, Lr, fmax),
         "ev_credible": ev5,
+        "dem_wave": st.optimize(dw, W_d, Ll, Lr, fmax_d, locked=lock_d),
         "chalk": fav,
     }
 

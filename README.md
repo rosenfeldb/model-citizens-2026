@@ -83,6 +83,7 @@ P(finish first) against 30 rivals ("mixed" field), under five versions of the tr
 | EV-max (≥5% only) | 79 | 15% | 3% | 8% | 10% | 16% |
 | **Recommended** (P(win)-optimized, ≥3% only) | 56 | **26%** | 5% | **22%** | **15%** | **32%** |
 | Aggressive (no floor) | 250 | 39% | 31% | 27% | 18% | 62% |
+| Dem wave (mirror bet, ≥3% only) | 80 | 10% | 5% | 20% | 15% | 5% |
 
 Full tables: `output/final_eval.csv`, `output/robustness.csv`, `output/sensitivity.csv`.
 
@@ -94,6 +95,27 @@ What the optimizer learned:
 - **Keep favorites in safe seats.** Safe-seat underdogs are mostly noise and give up ~20 near-certain points.
 - **The finding holds** across field mixes, rival counts, and national-swing sizes of 2–4 points. With
   rivals who already bet one way (`contrarian` field), P(win) drops but the direction stays.
+
+### What if Democrats do well?
+`picks_dem_wave.csv` is the mirror bet. It backs the Democrat (or the D-aligned independent) in all 80
+R-favored races where they have at least 3%, and it was tuned in a world where Democrats beat their polls
+by 2 points. P(win) against 30 rivals, by how much Democrats beat their polls:
+
+| Dems beat polls by | −4 | −2 | 0 | +1 | +2 | +3 | +4 | +6 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Recommended (GOP side) | 32% | 36% | 28% | 22% | 16% | 10% | 6% | 2% |
+| Dem wave | 1% | 5% | 10% | 13% | 15% | **17%** | **16%** | **12%** |
+
+The Dem-wave bet only pulls ahead once Democrats beat their polls by about 2 points, and it tops out near
+17%. The Republican-side bet peaks near 36%. Three reasons:
+- **That lane is crowded.** Rivals who chase underdogs on both sides also win the Democratic upsets.
+- **Our model discounts those upsets.** Experts rate many of these R seats safer than Kalshi does
+  (for example, five North Carolina seats), so the Democrat's real chance is lower than its price.
+- **In a huge wave, deeper long shots win.** Rivals who pick every underdog, even 1–2% Democrats in safe R
+  seats, beat a 3%-floor entry. We won't match them, because "always pick the Democrat" breaks the rules.
+
+Pick Dem wave only if you believe Democrats will beat their polls by 2+ points (as in the 2025 off-year
+races and 2026 specials).
 
 ### Why "Recommended" and not "Aggressive"
 Aggressive has the highest simulated P(win), but it picks the Republican in 455 of 470 races. The rules
@@ -116,12 +138,13 @@ pip install -r requirements.txt
 ./run_all.sh
 ```
 
-`run_all.sh` pulls fresh Kalshi prices, rebuilds probabilities, writes the four pick files to `output/`,
-re-scores them, and redraws the chart. Takes about 3 minutes.
+`run_all.sh` pulls fresh Kalshi prices, rebuilds probabilities, writes the five pick files to `output/`,
+re-scores them, and redraws the chart. Takes about 4 minutes.
 
 ## Files
 - `output/picks_recommended.csv` — **submission** (template format)
-- `output/picks_{aggressive,ev_credible,chalk}.csv` — alternatives
+- `output/picks_{dem_wave,aggressive,ev_credible,chalk}.csv` — alternatives
+- `output/pwin_by_polling_error.csv` — each strategy's P(win) when Democrats beat or miss their polls
 - `output/detail_*.csv` — each pick with its Kalshi price, points if right, and model probability
 - `output/model_probs.csv` — model probability for every race
 
