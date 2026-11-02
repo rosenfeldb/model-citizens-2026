@@ -1,0 +1,28 @@
+metric,value,source,date
+generic_ballot_avg_D_minus_R,+8.7,"Wikipedia avg of DDHQ/FPO/NBC/RCP/Silver (D 51.8, R 43.1)",2026-11-01
+generic_ballot_DDHQ_D_minus_R,+8.9,"Decision Desk HQ (D 51.2, R 42.3) via Wikipedia",2026-11-01
+generic_ballot_FiftyPlusOne_D_minus_R,+8.6,"FiftyPlusOne (D 52.3, R 43.7) via Wikipedia",2026-11-01
+generic_ballot_NBC_D_minus_R,+8.0,"NBC News (D 52.0, R 44.0) via Wikipedia",2026-11-01
+generic_ballot_RCP_D_minus_R,+8.9,"RealClearPolitics Oct 8-30 (D 52.0, R 43.1) via Wikipedia",2026-11-01
+generic_ballot_Silver_D_minus_R,+8.8,"Silver Bulletin (D 51.4, R 42.6) via Wikipedia",2026-11-01
+trump_approve_avg,36.8,"Wikipedia avg of 9 aggregators (Ballotpedia, CNN, DDHQ, FPO, NBC, RCP, Silver, Economist, NYT)",2026-11-01
+trump_disapprove_avg,60.5,"Wikipedia avg of 9 aggregators",2026-11-01
+trump_net_approval_avg,-23.7,"Wikipedia avg of 9 aggregators",2026-11-01
+trump_approve_RCP,39.0,"RealClearPolitics (disapprove 59.3; net -20.3) via Wikipedia",2026-11-01
+trump_approve_Silver,37.3,"Silver Bulletin (disapprove 59.9; net -22.6) via Wikipedia",2026-11-01
+trump_approve_DDHQ,38.5,"Decision Desk HQ (disapprove 58.9; net -20.4) via Wikipedia",2026-11-01
+trump_approve_FPO,35.4,"FiftyPlusOne (disapprove 61.6; net -26.2) via Wikipedia",2026-11-01
+trump_approve_range,34.0-39.0,"Lowest CNN/Economist 34; highest RCP 39",2026-11-01
+house_seat_ratings_Cook,"D 222 / R 195 / 18 Toss-up","Cook Political Report via Wikipedia ratings page (218 needed)",2026-10-30
+house_seat_ratings_Inside,"D 224 / R 198 / 13 Toss-up","Inside Elections via Wikipedia",2026-10-29
+house_seat_ratings_Sabato,"D 225 / R 193 / 17 Toss-up","Sabato's Crystal Ball via Wikipedia",2026-10-27
+house_seat_ratings_Economist,"D 230 / R 190 / 15 Toss-up","The Economist model via Wikipedia",2026-11-01
+house_seat_ratings_SplitTicket,"D 225 / R 197 / 13 Toss-up","Split Ticket via Wikipedia",2026-11-01
+house_seat_ratings_DDHQ,"D 223 / R 203 / 9 Toss-up","Decision Desk HQ via Wikipedia",2026-11-01
+house_seat_ratings_FPO,"D 230 / R 196 / 9 Toss-up","FiftyPlusOne via Wikipedia",2026-11-01
+house_seat_ratings_Fox,"D 223 / R 195 / 17 Toss-up","Fox News Power Rankings via Wikipedia",2026-10-27
+house_seat_ratings_Silver,"D 230 / R 196 / 9 Toss-up","Silver Bulletin via Wikipedia",2026-11-01
+house_seat_ratings_RCP,"D 226 / R 189 / 20 Toss-up","RealClearPolitics via Wikipedia",2026-11-01
+redistricting_net_2026,"D-leaning +1 / competitive -13 / R-leaning +12","Wikipedia mid-decade redistricting summary (AL CA FL LA NC OH TN TX UT redrew; MO and VA maps blocked)",2026-11-01
+polling_error_context_2024,"Polls underestimated Trump/GOP in 2016, 2020 and 2024 presidential years; in 2018 and 2022 midterms polls were roughly accurate to slightly D-overstated in some Senate races. Treat this as prior context only.","General knowledge (not fetched this session)",
+special_elections_2026,"6 House specials in 2026 all party holds (TX-18 D, GA-14 R 55.9-44.1, NJ-11 D 60.2-39.4, CA-01 R, CA-14 D-vs-D, GA-13 D-vs-D)","Wikipedia 2026 House page",2026-11-01
