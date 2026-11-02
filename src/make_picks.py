@@ -41,16 +41,23 @@ def research_names():
         p = ROOT / "data" / "research" / f
         if p.exists():
             for _, r in pd.read_csv(p, dtype=str).iterrows():
-                names[r.race_id] = {"D": r.get("dem_candidate"), "R": r.get("rep_candidate")}
+                names[r.race_id] = {"D": r.get("dem_candidate"), "R": r.get("rep_candidate"),
+                                    "incumbent": r.get("incumbent")}
     return names
 
 
 def candidate(race, side, names):
     tag = race[side]
     name = race[f"cand_{side}"]
+    info = names.get(race.race_id, {})
     if not isinstance(name, str) or not name or "party" in name.lower():
-        alt = names.get(race.race_id, {}).get(tag)
+        alt = info.get(tag)
         name = alt if isinstance(alt, str) and alt else name
+    if isinstance(name, str) and " / " in name:
+        # Louisiana jungle primary: several candidates of one party share the ballot.
+        inc = info.get("incumbent")
+        name = inc if inc in name.split(" / ") else \
+            f"{ {'R': 'Republican', 'D': 'Democratic'}.get(tag, tag)} field (jungle primary)"
     return name
 
 

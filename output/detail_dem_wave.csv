@@ -207,12 +207,12 @@ KY-03,House,D,Morgan McGarvey,0.991,0.9775,0.033,False,0.991,0.9829
 KY-04,House,R,Ed Gallrein,0.9862,0.9684999999999999,0.046,False,0.0138,0.0296
 KY-05,House,R,Hal Rogers,0.9921,0.9884999999999999,0.017,False,0.0079,0.0145
 KY-06,House,D,Zach Dembo,0.5506,0.565,0.824,False,0.5506,0.565
-LA-01,House,R,Randall Arrington / Steve Scalise,0.9869,0.9684999999999999,0.046,False,0.0131,0.0276
-LA-02,House,D,Troy Carter / Renada Collins,0.99,0.9804999999999999,0.028,False,0.99,0.9805
-LA-03,House,R,Kate Cotten / Clay Higgins,0.9882,0.9715,0.042,False,0.0118,0.0241
-LA-04,House,R,Gordon Heslop / Mike Johnson / Mike Nichols,0.9804,0.955,0.066,False,0.0196,0.046
-LA-05,House,R,Stewart Cathey Jr. / Misti Cordell / Omar Dantzler / Michael Echols / Gabe Firment / Austin Magee,0.9915,0.986,0.02,False,0.0085,0.016
-LA-06,House,R,Monique Appeaning / Larry Davis / Rick Edmonds / Chris Johnson / Michael Mebruer / Blake Miguez / Stephen Wagley,0.9775,0.9444999999999999,0.082,False,0.0225,0.0546
+LA-01,House,R,Steve Scalise,0.9869,0.9684999999999999,0.046,False,0.0131,0.0276
+LA-02,House,D,Troy Carter,0.99,0.9804999999999999,0.028,False,0.99,0.9805
+LA-03,House,R,Clay Higgins,0.9882,0.9715,0.042,False,0.0118,0.0241
+LA-04,House,R,Mike Johnson,0.9804,0.955,0.066,False,0.0196,0.046
+LA-05,House,R,Republican field (jungle primary),0.9915,0.986,0.02,False,0.0085,0.016
+LA-06,House,R,Republican field (jungle primary),0.9775,0.9444999999999999,0.082,False,0.0225,0.0546
 MA-01,House,D,Richard Neal,0.9923,0.9804999999999999,0.028,False,0.9923,0.9859
 MA-02,House,D,Jim McGovern,0.9936,0.9844999999999999,0.023,False,0.9936,0.989
 MA-03,House,D,Lori Trahan,0.989,0.977,0.034,False,0.989,0.978

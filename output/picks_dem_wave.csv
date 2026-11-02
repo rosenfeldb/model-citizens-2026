@@ -207,12 +207,12 @@ KY-03,House,D,Morgan McGarvey,0.991
 KY-04,House,R,Ed Gallrein,0.9862
 KY-05,House,R,Hal Rogers,0.9921
 KY-06,House,D,Zach Dembo,0.5506
-LA-01,House,R,Randall Arrington / Steve Scalise,0.9869
-LA-02,House,D,Troy Carter / Renada Collins,0.99
-LA-03,House,R,Kate Cotten / Clay Higgins,0.9882
-LA-04,House,R,Gordon Heslop / Mike Johnson / Mike Nichols,0.9804
-LA-05,House,R,Stewart Cathey Jr. / Misti Cordell / Omar Dantzler / Michael Echols / Gabe Firment / Austin Magee,0.9915
-LA-06,House,R,Monique Appeaning / Larry Davis / Rick Edmonds / Chris Johnson / Michael Mebruer / Blake Miguez / Stephen Wagley,0.9775
+LA-01,House,R,Steve Scalise,0.9869
+LA-02,House,D,Troy Carter,0.99
+LA-03,House,R,Clay Higgins,0.9882
+LA-04,House,R,Mike Johnson,0.9804
+LA-05,House,R,Republican field (jungle primary),0.9915
+LA-06,House,R,Republican field (jungle primary),0.9775
 MA-01,House,D,Richard Neal,0.9923
 MA-02,House,D,Jim McGovern,0.9936
 MA-03,House,D,Lori Trahan,0.989
